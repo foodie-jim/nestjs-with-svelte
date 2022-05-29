@@ -15,4 +15,8 @@ describe('ExampleService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
+
+  it('should return "Hello World!"', () => {
+    expect(service.getExampleHello()).toBe('Hello Example World!');
+  });
 });
