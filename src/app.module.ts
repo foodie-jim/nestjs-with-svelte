@@ -4,12 +4,14 @@ import { join } from 'path';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { ExampleModule } from './example/example.module';
 
 @Module({
   imports: [
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'client'),
     }),
+    ExampleModule,
   ],
   controllers: [AppController],
   providers: [AppService],
